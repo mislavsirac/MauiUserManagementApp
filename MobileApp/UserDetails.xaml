@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.UserDetails"
+             Title="User Details">
+    <StackLayout Padding="10">
+        <Frame 
+            Padding="0"
+            WidthRequest="150"
+            HeightRequest="150"
+            CornerRadius="75"
+            IsClippedToBounds="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Start">
+            <Image 
+                x:Name="ProfileImage"
+                Aspect="AspectFill"
+                WidthRequest="150"
+                HeightRequest="150"/>
+        </Frame>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="First Name:    " FontSize="Large" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="FirstNameLabel" FontSize="Large" HorizontalOptions="Start" Grid.Row="0" Grid.Column="1" Margin="20,0,0,0"/>
+
+            <Label Text="Last Name:    " FontSize="Large" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"/>
+            <Label x:Name="LastNameLabel" FontSize="Large" HorizontalOptions="Start" Grid.Row="1" Grid.Column="1" Margin="20,0,0,0"/>
+
+            <Label Text="Username:    " FontSize="Large" FontAttributes="Bold" Grid.Row="2" Grid.Column="0"/>
+            <Label x:Name="UsernameLabel" FontSize="Large" HorizontalOptions="Start" Grid.Row="2" Grid.Column="1" Margin="20,0,0,0"/>
+
+            <Label Text="Email:    " FontSize="Large" FontAttributes="Bold" Grid.Row="3" Grid.Column="0"/>
+            <Label x:Name="EmailLabel" FontSize="Large" HorizontalOptions="Start" Grid.Row="3" Grid.Column="1" Margin="20,0,0,0"/>
+
+            <Label Text="Country:    " FontSize="Large" FontAttributes="Bold" Grid.Row="4" Grid.Column="0"/>
+            <Label x:Name="CountryLabel" FontSize="Large" HorizontalOptions="Start" Grid.Row="4" Grid.Column="1" Margin="20,0,0,0"/>
+        </Grid>
+        <Button Text="Delete" Clicked="DeleteButton_Clicked" BackgroundColor="Red" Margin="10,20,10,0"/>
+        <Button Text="Back" Clicked="BackButton_Clicked" Margin="10,20,10,0"/>
+    </StackLayout>
+</ContentPage>

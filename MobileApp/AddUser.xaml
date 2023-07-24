@@ -1,0 +1,50 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.AddUser"
+             Title="Add new user">
+    <StackLayout Padding="10">
+
+        <Button Text="Back" Clicked="BackButton_Clicked"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="First name" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry Grid.Row="0" x:Name="FirstNameInput" Grid.Column="1" Margin="10,0,0,0"/>
+
+            <Label Text="Last name" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry Grid.Row="1" x:Name="LastNameInput"  Grid.Column="1" Margin="10,0,0,0"/>
+
+            <Label Text="Username" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry Grid.Row="2" x:Name="Username" Grid.Column="1" Margin="10,0,0,0"/>
+
+            <Label Text="Email" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry Grid.Row="3" x:Name="Email" Grid.Column="1" Margin="10,0,0,0"/>
+
+            <Label Text="Password" Grid.Row="4" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry IsPassword="true" x:Name="Password" Grid.Row="4" Grid.Column="1" Margin="10,0,0,0"/>
+
+            <Label Text="Country" Grid.Row="5" Grid.Column="0" VerticalOptions="Center"/>
+            <Picker x:Name="Picker" Grid.Row="5" Grid.Column="1" ItemsSource="{Binding Countries}" ItemDisplayBinding="{Binding Name}" Margin="10,0,0,0"/>
+
+            <Label Text="Image" Grid.Row="6" Grid.Column="0" VerticalOptions="Center"/>
+            <Button Text="Select Image" Clicked="ImageButton_Clicked" Grid.Row="6" Grid.Column="1" Margin="10,0,0,0"/>
+            <Label Text="" IsVisible="false" x:Name="FileName" Grid.Row="7" Grid.ColumnSpan="2" VerticalOptions="Center" Margin="10,20,10,0"/>
+
+            <Button Text="Submit" Clicked="Submit_CLicked" Grid.Row="8" Grid.ColumnSpan="2" VerticalOptions="Center" Margin="10,20,10,0"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
